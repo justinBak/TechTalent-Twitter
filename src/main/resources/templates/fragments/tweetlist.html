@@ -1,0 +1,14 @@
+<div th:if="${not #lists.isEmpty(tweetList)}">
+	<h3>Tweets</h3>
+</div>
+<div class="list-group" th:each="tweet:${tweetList}">
+	<div class = "list-group-item list-group-item-action">
+		<div class="d-flex w-100 justify-content-between">
+			<h5>
+				@<span th:text="${tweet.user.username}"></span>
+				<small><span th:text="${#dates.format(tweet.createdAt, 'M/d/yy')}"></span></small>
+			</h5>
+		</div>
+		<p th:text="${tweet.message}"></p>
+	</div>
+</div>

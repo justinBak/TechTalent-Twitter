@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	<head>
+		<title>Tweet Feed</title>
+		<th:block th:replace="fragments/header"></th:block>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div th:replace="fragments/navbar"></div>
+			<div th:replace="fragments/tweetlist"></div>
+		</div>
+		
+	</body>
+</html>
